@@ -27,11 +27,12 @@ pipeline{
             }
         }
         stage ("deploy"){
-            bat '''
+            steps{
+                bat '''
                 call venv\\Scripts\\activate
                 python adding.py
             '''
-
+            }
         }
         
     }
